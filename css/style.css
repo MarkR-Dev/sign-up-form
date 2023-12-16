@@ -13,3 +13,22 @@
     margin: 0;
 }
 
+.container {
+    display: flex;
+}
+
+.left,
+.right {
+    border: 2px solid red;
+    height: 100vh;
+}
+
+.left{
+    width: 40%;
+    background-color: grey;
+    
+}
+
+.right{
+    flex-grow: 1;
+}
