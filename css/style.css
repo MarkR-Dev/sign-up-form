@@ -5,7 +5,9 @@
 
 :root {
     box-sizing: border-box;
-    --font-white: white;
+    --color-white: white;
+    --color-green: #596D48;
+    --bg-color: #f9fafb;
 }
     
 *,
@@ -25,11 +27,10 @@
 
 .left,
 .right {
-    /* border: 2px solid red; */
     height: 100vh;
 }
 
-/* Left Section*/
+/* ------------------Left Section------------------ */
 .left {
     width: 35%;
     background-image: url("../assets/leaves.jpg");
@@ -48,14 +49,14 @@
     margin-top: 200px;
 }
 
-.logo h1 {
-    color: var(--font-white);
-    font-size: 6.5rem;
-    font-family: odin-font;
-}
-
 .logo img {
     height: 100%;
+}
+
+.logo h1 {
+    color: var(--color-white);
+    font-size: 6.5rem;
+    font-family: odin-font;
 }
 
 .photo-credit {
@@ -64,20 +65,63 @@
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--font-white);
+    color: var(--color-white);
     font-size: 0.9rem;
 }
 
 .photo-credit a {
-    color: var(--font-white);
-    font-family: monospace;
+    color: var(--color-white);
+    font-family: 'Courier New', Courier, monospace;
 }
 
-/* Right Section */
+/* -------------Right Section ------------*/
 .right {
     flex-grow: 1;
-    background-color: #f9fafb;
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.right > *{
+    border: 1px solid red;
+}
+
+em{
+    font-style: italic;
+}
+
+.headings {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.headings h2:last-child {
+    margin-top: 30px;
+}
+
+.form{
+    background-color: var(--color-white);
+}
+
+.right .sign-up button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    width: 160px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.right .sign-up a {
+    color: var(--color-green);
+    text-decoration: none;
+    font-weight: 700;
+}
+
 
 
 /* Media queries */
