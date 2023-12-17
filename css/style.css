@@ -1,5 +1,11 @@
+@font-face {
+    font-family: odin-font;
+    src: url("../assets/Norse-Bold.otf");
+}
+
 :root {
     box-sizing: border-box;
+    --font-white: white;
 }
     
 *,
@@ -19,16 +25,79 @@
 
 .left,
 .right {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 100vh;
 }
 
-.left{
-    width: 40%;
-    background-color: grey;
-    
+/* Left Section*/
+.left {
+    width: 35%;
+    background-image: url("../assets/leaves.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-.right{
+.logo {
+    height: 200px;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin-top: 200px;
+}
+
+.logo h1 {
+    color: var(--font-white);
+    font-size: 6.5rem;
+    font-family: odin-font;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--font-white);
+    font-size: 0.9rem;
+}
+
+.photo-credit a {
+    color: var(--font-white);
+    font-family: monospace;
+}
+
+/* Right Section */
+.right {
     flex-grow: 1;
+    background-color: #f9fafb;
+}
+
+
+/* Media queries */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left {
+        width: 100%;
+        height: 26vh;
+    }
+    
+    .logo {
+        height: 100%;
+        padding: 40px;
+        margin-top: 0;
+    }
+
+    .logo h1 {
+        font-size: 5rem;
+    }
 }
