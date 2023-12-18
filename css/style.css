@@ -32,7 +32,7 @@
 
 /* ------------------Left Section------------------ */
 .left {
-    width: 35%;
+    width: 40%;
     background-image: url("../assets/leaves.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -85,22 +85,17 @@
     gap: 30px;
 }
 
-.right > *{
-    /* border: 1px solid red; */
-}
-
 em{
     font-style: italic;
 }
 
 .container{
-    width: 80%;
-    padding-left: 40px;
-    border: 1px solid blue; 
+    width: 70%;
+    padding-left: 50px;
 }
 
 .headings {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -110,35 +105,58 @@ em{
 
 .form-container {
     background-color: var(--color-white);
+    padding: 20px 0;
 }
 
 .form-container h1 {
     font-weight: 600;
     font-size: 1.1rem;
+    margin-bottom: 16px;
 }
 
 form{
-    display: flex;
-    flex-wrap: wrap;
+   display: flex;
+   flex-wrap: wrap;
 }
 
 form div {
-    border: 1px solid black;
-    padding: 5px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    margin: 20px 40px 20px 0;
+}
+
+label{
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+input {
+    height: 1.7rem;
+    padding: 14px 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    outline: 1px solid blue;
+    box-shadow: 2px 2px 5px 1px rgb(167, 166, 166);
 }
 
 .right .sign-up button {
     background-color: var(--color-green);
     color: var(--color-white);
-    width: 160px;
-    padding: 0.5rem 0.5rem;
+    width: 180px;
+    padding: 18px 10px;
     border-radius: 5px;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .right .sign-up a {
@@ -147,9 +165,11 @@ form div {
     font-weight: 700;
 }
 
+.sign-up{
+    background-color: var(--bg-color);
+}
 
-
-/* Media queries */
+/* ------------------Media queries -------------------*/
 @media (max-width: 1000px) {
     .main-container {
         flex-direction: column;
@@ -157,7 +177,7 @@ form div {
     
     .left {
         width: 100%;
-        height: 26vh;
+        height: 25vh;
     }
     
     .logo {
@@ -168,5 +188,40 @@ form div {
 
     .logo h1 {
         font-size: 5rem;
+    }
+
+    .right {
+        justify-content: flex-start;
+        height: 75vh;
+    }
+
+    .container{
+        margin: 0 auto;
+    }
+
+    .headings {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 700px){
+    .right{
+        height: 100%;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+
+    form div{
+        width: 100%;
+    }
+
+    .sign-up{
+        padding: 30px 0;
     }
 }
