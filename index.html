@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main-container">
         <div class="left">
             <div class="logo">
                 <img src="assets/odin.png" alt="The Odin Project Logo">
@@ -19,27 +19,58 @@
 
         <div class="right">
             <div class="headings">
-                <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
-                <h2>You <em>know</em> you want to.</h2>
+                <div class="container">
+                    <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+                    <h2>You <em>know</em> you want to.</h2>
+                </div>
             </div>
-
-            <div class="form">
-                action="https://httpbin.org/post" method="post"
+           
+            <div class="form-container">
+                <div class="container">
+                    <h1>Let's do this!</h1>
+                    <form action="https://httpbin.org/post" method="post">
+                        <div class="first-name">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        
+                        <div class="last-name">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
+                        
+                        <div class="email">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="phone">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="password">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        
+                        <div class="confirm-password">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
+                    </form>
+                </div>
             </div>
-
+            
             <div class="sign-up">
-                <button type="submit" form="">Create Account</button>
-                <p>Already have an account? <a href="#">Log In</a></p>
+                <div class="container">
+                    <button type="submit" form="">Create Account</button>
+                    <p>Already have an account? <a href="#">Log In</a></p>
+                </div>
+                    
             </div>
-
+            
         </div>
-
     </div>
-    
-    
-    
-  
-
-   
 </body>
 </html>

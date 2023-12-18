@@ -21,7 +21,7 @@
     margin: 0;
 }
 
-.container {
+.main-container {
     display: flex;
 }
 
@@ -82,14 +82,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
 }
 
 .right > *{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 em{
     font-style: italic;
+}
+
+.container{
+    width: 80%;
+    padding-left: 40px;
+    border: 1px solid blue; 
 }
 
 .headings {
@@ -101,8 +108,26 @@ em{
     margin-top: 30px;
 }
 
-.form{
+.form-container {
     background-color: var(--color-white);
+}
+
+.form-container h1 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form div {
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .right .sign-up button {
@@ -126,7 +151,7 @@ em{
 
 /* Media queries */
 @media (max-width: 1000px) {
-    .container {
+    .main-container {
         flex-direction: column;
     }
     
