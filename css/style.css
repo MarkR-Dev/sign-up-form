@@ -95,8 +95,10 @@ em{
 }
 
 .headings {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .headings h2:last-child {
@@ -105,12 +107,13 @@ em{
 
 .form-container {
     background-color: var(--color-white);
-    padding: 20px 0;
+    padding: 30px 0;
+    box-shadow: 2px 3px 6px 2px lightgray;
 }
 
 .form-container h1 {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 16px;
 }
 
@@ -123,7 +126,7 @@ form div {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 20px 40px 20px 0;
+    margin: 10px 40px 10px 0;
 }
 
 label{
