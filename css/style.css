@@ -8,6 +8,7 @@
     --color-white: white;
     --color-green: #596D48;
     --bg-color: #f9fafb;
+    --page-font: Arial, Helvetica, sans-serif;
 }
     
 *,
@@ -78,7 +79,7 @@
 .right {
     flex-grow: 1;
     background-color: var(--bg-color);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--page-font);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +91,8 @@ em{
 }
 
 .container{
-    width: 70%;
+    /* width: max(70%, 600px); */
+    width: clamp(600px, 70%, 680px);
     padding-left: 50px;
 }
 
@@ -132,7 +134,7 @@ form div {
 label{
     font-size: 0.7rem;
     letter-spacing: 0.1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--page-font);
     font-weight: 700;
     margin-bottom: 3px;
 }
@@ -143,11 +145,24 @@ input {
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #E5E7EB;
+    box-sizing: border-box;
 }
 
 input:focus {
     outline: 1px solid blue;
     box-shadow: 2px 2px 5px 1px rgb(167, 166, 166);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid lightcoral;
+    outline: 1px solid lightcoral;
+    background-color: rgba(240, 128, 128, 0.5);
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border: 1px solid lightgreen;
+    outline: 1px solid lightgreen;
+    background-color: rgba(144, 238, 144, 0.5);
 }
 
 .right .sign-up button {
@@ -166,10 +181,6 @@ input:focus {
     color: var(--color-green);
     text-decoration: none;
     font-weight: 700;
-}
-
-.sign-up{
-    background-color: var(--bg-color);
 }
 
 /* ------------------Media queries -------------------*/
@@ -214,6 +225,7 @@ input:focus {
     
     .container {
         padding: 0;
+        width: 70%;
     }
     
     form {
