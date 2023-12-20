@@ -165,6 +165,48 @@ input:not(:focus):not(:placeholder-shown):valid {
     background-color: rgba(144, 238, 144, 0.5);
 }
 
+input + span {
+    position: relative;
+}
+
+input + span::before {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid + span::before{
+    content: "✖";
+    color: lightcoral;
+    font-size: 2rem;
+}
+
+input:not(:focus):not(:placeholder-shown):valid + span::before{
+    content: "✓";
+    color: lightgreen;
+    font-size: 2rem;
+}
+
+input + span::after {
+    top: 4px;
+    position: absolute;
+    font-size: 0.8rem;
+    color: lightcoral;
+}
+
+input[type="email"]:not(:focus):not(:placeholder-shown):invalid + span::after{
+    content: "Please enter a valid email address";
+}
+
+input[type="tel"]:not(:focus):not(:placeholder-shown):invalid + span::after{
+    content: "Please enter a valid phone number";
+}
+
+input[type="password"]:not(:focus):not(:placeholder-shown):invalid + span::after{
+    content: "Passwords must contain at least 1 number, 1 lowercase letter and 1 uppercase letter";
+    font-size: 0.6rem;
+}
+
 .right .sign-up button {
     background-color: var(--color-green);
     color: var(--color-white);
@@ -240,3 +282,7 @@ input:not(:focus):not(:placeholder-shown):valid {
         padding: 30px 0;
     }
 }
+
+
+
+
