@@ -31,7 +31,7 @@
     height: 100vh;
 }
 
-/* ------------------Left Section------------------ */
+/* ----------Left Section---------- */
 .left {
     width: 40%;
     background-image: url("../assets/leaves.jpg");
@@ -75,7 +75,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* -------------Right Section ------------*/
+/* ----------Right Section----------*/
 .right {
     flex-grow: 1;
     background-color: var(--bg-color);
@@ -86,12 +86,11 @@
     gap: 30px;
 }
 
-em{
+em {
     font-style: italic;
 }
 
-.container{
-    /* width: max(70%, 600px); */
+.container {
     width: clamp(600px, 70%, 680px);
     padding-left: 50px;
 }
@@ -128,7 +127,7 @@ form div {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 10px 40px 10px 0;
+    margin: 14px 40px 14px 0;
 }
 
 label{
@@ -202,9 +201,25 @@ input[type="tel"]:not(:focus):not(:placeholder-shown):invalid + span::after{
     content: "Please enter a valid phone number";
 }
 
-input[type="password"]:not(:focus):not(:placeholder-shown):invalid + span::after{
-    content: "Passwords must contain at least 1 number, 1 lowercase letter and 1 uppercase letter";
-    font-size: 0.6rem;
+input#password:not(:focus):not(:placeholder-shown):invalid + span::after{
+    content: "Password must contain at least 1 number, 1 lowercase letter and 1 uppercase letter";
+    font-size: 0.68rem;
+} 
+
+#confirm-password.error{
+    border: 1px solid lightcoral;
+    outline: 1px solid lightcoral;
+    background-color: rgba(240, 128, 128, 0.5);
+}
+
+#confirm-password.error + span::after{
+    content: "Passwords do not match";
+}
+
+#confirm-password.error + span::before{
+    content: "✖";
+    color: lightcoral;
+    font-size: 2rem;
 }
 
 .right .sign-up button {
@@ -212,11 +227,11 @@ input[type="password"]:not(:focus):not(:placeholder-shown):invalid + span::after
     color: var(--color-white);
     width: 180px;
     padding: 18px 10px;
+    margin-bottom: 30px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
     cursor: pointer;
-    margin-bottom: 30px;
 }
 
 .right .sign-up a {
@@ -225,7 +240,6 @@ input[type="password"]:not(:focus):not(:placeholder-shown):invalid + span::after
     font-weight: 700;
 }
 
-/* ------------------Media queries -------------------*/
 @media (max-width: 1000px) {
     .main-container {
         flex-direction: column;
@@ -282,7 +296,4 @@ input[type="password"]:not(:focus):not(:placeholder-shown):invalid + span::after
         padding: 30px 0;
     }
 }
-
-
-
 
